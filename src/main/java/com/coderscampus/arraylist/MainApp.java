@@ -5,7 +5,9 @@ public class MainApp {
 	public static void main(String[] args) {
 		CustomArrayList<String> list = new CustomArrayList<>();
 		list.add("tm");
+		list.add("tm");
 		list.add("tn");
+		System.out.println(list.getSize());
 		list.add("tb");
 		list.add("tv");
 		list.add("tc");
@@ -24,7 +26,7 @@ public class MainApp {
 		list.add("a3");
 		list.get(1);
 		System.out.println(list.get(0));
-		System.out.println(list.get(9));
+		System.out.println(list.get(13));
 		System.out.println(list.getSize());
 		
 //		CustomArrayList<Integer> integerList = new CustomArrayList<>();

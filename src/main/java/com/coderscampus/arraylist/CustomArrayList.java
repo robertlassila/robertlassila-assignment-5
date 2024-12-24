@@ -10,15 +10,6 @@ public class CustomArrayList<T> implements CustomList<T> {
 	int index = 0;
 	@Override
 	public boolean add(T item) {
-		
-		
-		if (index >= 1) {
-			for (Object thing : items) {
-				if (thing != null && thing.equals(item)) {
-					return false;
-				}
-			}
-		}
 		if (index < addLimit) {
 			items[index] = item;
 			index++;
@@ -38,14 +29,21 @@ public class CustomArrayList<T> implements CustomList<T> {
 	public int getSize() {
 		int sizeCounter = 0;
 		for (Object thing : items) {
-			sizeCounter++;
+			if (thing != null) {
+				sizeCounter++;				
+			}
 		}
 		return sizeCounter;
 	}
 
 	@Override
 	public T get(int index) {
-		return ((T) items[index]);
+		
+	    if (index < 0 || index >= items.length) {
+	        throw new IndexOutOfBoundsException("Index " + index + " is out of bounds for size " + items.length);
+	    }
+			return ((T) items[index]);
+
 	}
 	
 }
