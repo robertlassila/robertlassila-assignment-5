@@ -28,6 +28,15 @@ public class MainApp {
 		System.out.println(list.get(0));
 		System.out.println(list.get(13));
 		System.out.println(list.getSize());
+		list.add("tb");
+		list.add("tv");
+		list.add("tc");
+		list.add("tx");
+		list.add("td");
+		list.add("ts");
+		list.add("te");
+		System.out.println(list.getSize());
+		System.out.println(list.get(39));
 		
 //		CustomArrayList<Integer> integerList = new CustomArrayList<>();
 //		integerList.add(2);
