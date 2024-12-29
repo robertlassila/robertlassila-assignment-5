@@ -25,7 +25,7 @@ public class CustomArrayList<T> implements CustomList<T> {
 	@Override
 	public T get(int index) {
 		
-	    if (index < 0 || index >= items.length) {
+	    if (index < 0 || index >= itemCounter) {
 	        throw new IndexOutOfBoundsException("Index " + index + " is out of bounds for size " + itemCounter);
 	    }
 			return ((T) items[index]);
