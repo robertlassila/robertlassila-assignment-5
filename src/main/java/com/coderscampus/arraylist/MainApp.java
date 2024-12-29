@@ -37,6 +37,8 @@ public class MainApp {
 		list.add("te");
 		System.out.println(list.getSize());
 		System.out.println(list.get(39));
+		System.out.println(list.get(41));
+		
 		
 //		CustomArrayList<Integer> integerList = new CustomArrayList<>();
 //		integerList.add(2);
