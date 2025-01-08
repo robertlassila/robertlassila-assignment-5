@@ -36,18 +36,20 @@ public class MainApp {
 		list.add("ts");
 		list.add("te");
 		System.out.println(list.getSize());
-		System.out.println(list.get(39));
+		//System.out.println(list.get(39));
 		
 		
 		
-//		CustomArrayList<Integer> integerList = new CustomArrayList<>();
-//		integerList.add(2);
-//		integerList.add(67);
-//		integerList.add(24);
-//		integerList.add(32);
-//		integerList.add(26);
-//		System.out.println(integerList.getSize());
-//		System.out.println(integerList.get(0));
+		CustomArrayList<Integer> integerList = new CustomArrayList<>();
+		
+		for (int i = 0; i < 100000; i++) {
+			integerList.add(i);
+		}
+		
+		System.out.println("integerList size: " + integerList.getSize());
+		System.out.println("integerList item at index 1: " + integerList.get(1));
+		System.out.println("integerList item at index 50000: " + integerList.get(50000));
+		System.out.println("integerList item at index 99999: " + integerList.get(99999));
 		
 		
 		
