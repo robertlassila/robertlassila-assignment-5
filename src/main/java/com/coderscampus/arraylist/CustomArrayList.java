@@ -5,28 +5,27 @@ import java.util.Arrays;
 public class CustomArrayList<T> implements CustomList<T> {
 	Object[] items = new Object[10];
 
-	int itemCounter = 0;
+	int size = 0;
 	@Override
 	public boolean add(T item) {
-		if (itemCounter >= items.length) {
-			Object[] newArray = Arrays.copyOf(items, (items.length * 2)); 
-			items = newArray;
+		if (size >= items.length) { 
+			items = Arrays.copyOf(items, (items.length * 2));
 		}
-		items[itemCounter] = item;
-		itemCounter++;
+		items[size] = item;
+		size++;
 		return true;
 	}
 
 	@Override
 	public int getSize() {
-		return itemCounter;
+		return size;
 	}
 
 	@Override
 	public T get(int index) {
 		
-	    if (index < 0 || index >= itemCounter) {
-	        throw new IndexOutOfBoundsException("Index " + index + " is out of bounds for size " + itemCounter);
+	    if (index < 0 || index >= size) {
+	        throw new IndexOutOfBoundsException("Index " + index + " is out of bounds for size " + size);
 	    }
 			return ((T) items[index]);
 
